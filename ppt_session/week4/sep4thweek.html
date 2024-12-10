@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="sep4thweek.css">
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar">
+        <h1 class="logo">ADVENTURE</h1>
+        <ul class="nav-link">
+            <li class="active"><a href="#"></a>Home</li>
+            <li><a href="#"></a>Tours</li>
+            <li><a href="#"></a>Explore</li>
+            <li><a href="#"></a>About</li>
+            <li class="ctn"><a href=""></a>Contact</li>
+        </ul>
+        <img src="menubtn.png" alt="" class="menu-btn">
+    </nav>
+        <!--header-->
+    <header>
+        <div class="header-content">
+            <h2>Explore the colorful world</h2>
+             <div class="line"></div>
+             <h1>A WONDERFUL GIFT</h1>
+             <a href="#" class="ctn">Learn more</a>
+        </div>
+    </header>
+
+    <!---Events-->
+<section class="events">
+    <div class="title">
+        <h1>Upcoming Events</h1>
+        <div class="line"></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img class="i1" src="img1.jpg" alt="" width="80%">
+            <h4>Everest  Base Camp Trek</h4>
+            <p>Everest Base Camp treks are popular adventure trips that offer a chance to explore the mountains and valleys around Mount Everest</p>
+            <a href="#" class="ctn">Learn more</a>
+        </div>
+
+        <div class="col">
+            <img class="i2" src="walking.webp" alt="" width="80%">
+            <h4>Walking Holidays</h4>
+            <p>A walking holiday is a trip where the main activity is walking or hiking. They can be a great way to experience a destination at your own pace. </p>
+            <a href="#" class="ctn">Learn more</a>
+        </div>
+    </div>
+</section>
+
+<!---section of explore-->
+<section class="explore">
+    <div class="explore-content">
+        <h1>EXPLORE THE WORLD</h1>
+    </div>
+</section>
+
+<!--tours and destinations-->
+<section class="tours">
+    <div class="row">
+        <div class="col content-col">
+            <h1>UPCOMING TOURS & DESTINATIONS</h1>
+            <div class="line"></div>
+        <P>DESTINATION TOUR & TRAVELS was developed and managing by women entrepreneurs with the aim of bringing the new and unexplored locations to the travelers. Later the company became a partnership organization in order to manage all the service smoothly.</P>
+        <a href="#" class="ctn">Learn more</a>
+    </div>
+    <div class="col image-col">
+        <div class="img-gallery">
+            <img src="gal1.jpeg" alt="" class="g1">
+            <img src="gal.jpeg" alt="" class="g1">
+            <img src="gal3.jpeg" alt="" class="g1">
+            <img src="gal4.jpeg" alt="" class="g1">
+        </div>
+    </div>
+    </div>
+</section>
+
+<section class="footer">
+<p>Fifth Avenue, NY 10160, New York, USA | Phone: 800-123-456 | Email: info@destinationtour.com</p>
+<p>Copyright © 2024 Outdoor Adventure</p>
+</section>
+
+<!---when we click menu btn it will display mobile size view-->
+    <script>
+        const menuBtn =  document.querySelector('.menu-btn');
+        const navlink = document.querySelector('.nav-link');
+
+        menuBtn.addEventListener('click',()=>{
+            navlink.classList.toggle('mobile-menu');
+        })
+    </script>
+</body>
+</html>

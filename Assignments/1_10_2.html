@@ -1,0 +1,88 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+    body{
+    background-color: lightblue;
+    }
+    #c1{
+    color: darkblue;
+    font-weight: bold;
+    }
+    input[type="text"]{
+        color: blue;
+        background-color: aqua;
+    }
+    input[type=email]{
+        color: blue;
+        background-color: aqua;
+    }
+    input{
+        color:blue;
+    }
+    .checkbox-group{
+       color: blue;
+       background-color: aqua;
+    }
+    .btn{
+        background-color: aqua;
+        color: blue;
+        font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+    <table> 
+        <h2>Student details</h2>
+    <form action="">
+       <tr>
+        <td id="c1">Enter name:</td>
+           <td> <input type="text" placeholder="Name"> </td>
+      </tr>
+      <tr>
+        <td id="c1">Email:</td>
+        <td><input type="email" placeholder="Email"> </td>
+    </tr>
+     <tr>
+       <td id="c1"> Enter contact number:</td>
+       <td><input type="text" placeholder="Contact number"> </td>
+    </tr> 
+    <tr>
+      <td id="c1">Higher education:</td></br>
+       <td><input type="text"   placeholder="Higher education"> </td>
+   </tr>
+     <tr>
+    <td id="c1">Courses:</td>
+     <td><select name="Courses">
+         <option  value="-1">select</option>
+         <option value="Full Stack Development">Full Stack Development</option>
+         <option  value="Java Full Stack Development">Java Full Stack Development</option>
+         <option  value="Data Science">Data Science</option>
+         <option  value="Digital Marketing">Digital Marketing</option>
+         <option  value="Software Testing">Software Testing</option>
+         <option  value="Data Analytics">Data Analytics</option>
+         <option  value="Buisness Analytics">Buisness Analytics</option>
+     </select></td>
+     </tr>
+     <tr>
+      <td id="c1">Resume:</td>
+      <td><input type="file"></td>
+     </tr>
+     <tr>
+      <td id="c1">Any certifications:</td>
+      <td><input type="file"></td>
+     </tr>
+     </table>
+     <label id="c1" for="checkbox">Checkbox:</label> 
+     <input class="checkbox-group" type="checkbox" name="checkbox" value="checkbox">Python</br>
+     <input class="checkbox-group" type="checkbox" name="checkbox" value="checkbox">Java</br>
+     <input class="checkbox-group" type="checkbox" name="checkbox" value="checkbox">JavaScript</br>
+     <input class="checkbox-group" type="checkbox" name="checkbox" value="checkbox">Ruby</br>    
+    </form>
+    </br>
+     <button class="btn" type="submit">Submit</button>
+     <button class="btn" type="cancel">Cancel</button>
+</body>
+</html>

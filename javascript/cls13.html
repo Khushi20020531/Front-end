@@ -1,0 +1,196 @@
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>enter the letter:
+        <input type="text" id="ab" 
+        onkeyup="handleKeyup(event)"
+        onkeydown="handleKeydown(event)"
+        onkeypress="handleKeypress(event)"/>
+    </h2>
+<script>
+    function handleKeyup(event){
+        let x=document.getElementById("ab");
+        x.value=x.value.toUpperCase();
+    }
+    function handleKeydown(event ){
+        alert("Key down");
+    }
+    function handleKeypress(event){
+        alert("Key press");
+    }
+</script>
+</body>
+</html>  -->
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="key">press a key to see its name...</p>
+    <script>
+        document.addEventListener("keydown", function(event) {
+            document.getElementById("key").innerHTML = "You pressed the " + event.key + " key";
+            });
+    </script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click me</button>
+    <p id="msg"></p>
+    <script>
+        var button=document.getElementById("btn")
+        var msg=document.getElementById("msg")
+        button.addEventListener('click',()=>{
+            msg.textContent="single click";
+        })
+        button.addEventListener('dblclick',()=>{
+            msg.textContent="double click";
+        })
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>image hover effect</h2>
+    <div class="img">
+        <img id="baseImg" src="E:\Front-end\ppt_session\pune.jpeg" alt="img1">
+        <img id="hoverImg" src="E:\Front-end\ppt_session\mumbai.jpeg" alt="img2">
+        <img src="clickImg" src="E:\Front-end\ppt_session\hydrabad.jpeg" alt="img3">
+    </div>
+
+    <script>
+        const baseImg=document.getElementById('baseImg');
+        const hoverImg=document.getElementById('hoverImg');
+
+
+        baseImg.addEventListener('mouseover',()=>
+    {
+        hoverImg.style.display="block";
+    });
+
+    baseImg.addEventListener('mouseout',()=>
+    {
+        hoverImg.style.display="block";
+    });
+    </script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border:2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div onmousemove="fun(event)"></div>
+    <p id="demo"></p>
+    <script>
+        //using html
+         function fun(event){
+             let x=event.clientX;
+             let y=event.clientY;
+             let coor="coordinated ("+x+","+y+")";
+             document.getElementById('demo').innerHTML=coor;
+         }
+
+        //using js
+        const object = document.querySelector('div');
+        object.addEventListener('mouseleave',() => {
+            const x=event.clientX;
+            const y=event.clientY;
+            const coordinates=`Coordinates:(${x},${y})`;
+            document.getElementById('demo').textContent=coordinates;
+        });
+
+        //using addeventlistener
+         document.addEventListener('mouseleave',(event) => {
+   const x=event.clientX;
+   const y=event.clientY;
+   const coordinates=`Coordinates:(${x},${y})`;
+   document.getElementById('demo').textContent=coordinates;
+});
+
+</script>
+</body>
+</html> -->
+
+<!-- wap to reverse a string
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txt">
+    <button onclick="reverse()">Reverse</button>
+    <p id="demo"></p>
+    <script>
+        function reverse() {
+            const txt=document.getElementById("txt").value;
+            const reversed = txt.split("").reverse().join("");
+            document.getElementById("demo").innerHTML=reversed;
+        }
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Reverse String</title>
+</head>
+<body>
+  <input type="text" id="inputString">
+  <button onclick="reverseString()">Reverse</button>
+  <p id="result"></p>
+
+  <script>
+    //reverse string without using methods
+    function reverseString() {
+      const inputString = document.getElementById("inputString").value;
+      let reversedString = "";
+
+      for (let i = inputString.length - 1; i >= 0; i--) {
+        reversedString += inputString[i];
+      }
+
+      document.getElementById("result").textContent = reversedString;
+    }
+  </script>
+</body>
+</html> -->

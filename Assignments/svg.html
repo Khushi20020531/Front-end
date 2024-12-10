@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Using svg tag</h1>
+
+    <h2>Rectangle</h2>
+    <svg>
+        <rect width="200" height="100" stroke="black" fill="green"></rect>
+    </svg>
+    <h2>Circle</h2>
+    <svg>
+      <circle r="45" cx="50" cy="50" stroke="black" fill="blue"></circle>  
+    </svg>
+    <h2>Ellipse</h2>
+    <svg>
+        <ellipse rx="100" ry="50" cx="120" cy="80" stroke="black" fill="yellow"></ellipse>
+    </svg>
+    <h2>Line</h2>
+    <h3>Horizontal line</h3>
+    <svg>
+        <line x1="0" y1="10" x2="250" y2="10" stroke="black"></line>
+    </svg>
+    <h3>Verticle line</h3>
+    <svg>
+        <line x1="0" y1="0" x2="0" y2="200" stroke="black" stroke-width="3"></line>
+    </svg>
+    <h2>Polygon</h2>
+    <svg width="280" height="360">
+        <polygon points="150,15 258,77 258,202 150,265 42,202 42,77" stroke="black" fill="skyblue">
+        </polygon>
+    </svg>
+    <h2>Polyline</h2>
+    <svg height="200">
+        <polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" stroke-width="3"
+        style="fill:aqua; stroke:blue;"></polyline>
+    </svg>
+    <h2>Path</h2>
+    <svg width="400" height="210">
+    <path id="lineAB" d="M 150 5 L 75 200 L 225 200 Z" stroke="orange"fill=grey stroke-width="3"></path>
+    </svg>
+</body>
+</html>

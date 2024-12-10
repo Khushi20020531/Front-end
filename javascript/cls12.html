@@ -1,0 +1,167 @@
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> -->
+    <!-- <button onclick="displaytext()">Display text</button><br><br>
+    <div id="display-area"></div><br>
+    <button onclick="deletetext()">Delete text</button>
+    <script>
+        function displaytext(){
+           const displayArea=document.getElementById('display-area');
+           displayArea.textContent="Welcome";
+           document.getElementById('display-area').style.fontSize="3em"
+        }
+        function deletetext(){
+           const displayArea=document.getElementById('display-area');
+           displayArea.textContent='';
+        }
+    </script> -->
+
+
+    <!-- <h1>add and remove event listener</h1>
+    <div class="mydiv">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum consectetur totam sed ab debitis nobis rem obcaecati eum atque nulla corporis, itaque nisi distinctio animi temporibus asperiores reiciendis neque hic!</div>
+    <p>click "remove"</p>
+    <p id="demo"></p>
+    <button onclick="rh()">remove</button>
+    <script>
+        let a=document.getElementById('mydiv')
+        a.addEventListener('mousemove',fn)
+        function fn(){
+            a.removeEventListener('mousemove',fn)
+        }
+        function fn(){
+            document.getElementById('demo').innerHTML=math.random();
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>add child</h1>
+    <button onclick="fn()">create paragraoh</button>
+
+    <script>
+        function fn(){
+            let a=document.createElement('p')
+            let t=document.createTextNode("paragraph is created")
+            a.appendChild(t)
+            document.body.appendChild(a)
+        }
+
+    </script>
+</body>
+</html> -->
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>remove child</h1>
+    <button onclick="del()">remove </button>
+    <ul id="mylist">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <script>
+         function del(){
+            let list=document.getElementById("mylist");
+            if(list.hasChildNodes()){
+                list.removeChild(list.children[0])
+            }
+        }
+    </script>
+</body>
+</html> -->
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>replace child</h1>
+    <ul id="mylist">
+        <li>excelr</li>
+        <li>W3C</li>
+        <li>geeksforgeeks</li>
+    </ul>
+    <button id="homebtn">Home</button>
+    <button id="replacebtn">Replace</button>
+    <ul id="mylist">
+
+        <script>
+          let a=document.getElementById('mylist').children[1];
+          let b=document.getElementById('mylist').children[2];
+          a.textContent="excelr";
+          b.textContent="excelr";
+        </script>
+    </ul>
+</body>
+</html> -->
+
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .democlass{
+            color: crimson;
+        }
+        .democlass1{
+            color:chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">Using set attribute</h1>
+    <h3 id="h3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem a quis libero non consequuntur illum quae provident. Sunt aspernatur, placeat magni ad aliquam ipsa nesciunt repellendus, atque, eius laborum iusto.</h3>
+    <button onclick="sa()">Add class</button>
+    <script>
+        function sa(){
+            document.getElementById("h1").setAttribute("class","democlass")
+            document.getElementById("h3").setAttribute("class","democlass1")
+        }
+    </script>
+</body>
+</html> -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .democlass{
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="democlass">hello world!!</h1>
+    <button onclick="mf()">try it</button>
+    <script>
+        function mf(){
+            document.getElementsByTagName("h1")[0].removeAttribute("class")
+        }
+    </script>
+</body>
+</html>

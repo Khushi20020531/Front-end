@@ -1,0 +1,82 @@
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="mybtn">click me</button>
+
+    <script>
+        const button=document.getElementById("mybtn");
+        function click(){
+            alert("Button clicked");
+        }
+            button.addEventListener("click",click);
+            setTimeout(()=>{
+            button.removeEventListener("click",click);
+            }, 6000);
+    </script>
+</body>
+</html>  -->
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="a"></div>
+    <script>
+        const divElement=document.createElement("div");
+        divElement.textContent="hello world";
+        
+        const a=document.getElementById('a')
+        a.appendChild(divElement);
+    </script>
+</body>
+</html>  -->
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="mylist">
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+    </ul>
+
+    <script>
+        const listElement=document.createElement("li");
+        listElement.textContent="new letter";
+        const list=document.getElementById("mylist");
+        list.appendChild(listElement);
+    </script>
+</body>
+</html>  -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{
+            background-color:aqua;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <button id="mybtn">click me</button>
+    <script>
+        const button=document.getElementById("mybtn");
+        button.classList.add("active");
+    </script> 
+</body>
+</html> 

@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         table:hover{
+            color: yellow;
+            background-color: rgb(81, 79, 79);
+         }
+         ::selection{
+            color: chartreuse;
+         }
+         .class{
+            color: green;
+         }
+         #p{
+            color: darkmagenta;
+         }
+         div.c1{
+            color: brown;
+         }
+         h6::first-letter{
+            font-size: xx-large;
+            color: blue;
+        }
+        h5::first-line{
+            color: blueviolet;
+        }
+        p::before{
+            content: url(excelr.jpeg);   
+        }
+        h3,ul{
+            color: red;
+        }
+        p{
+        display: none;
+       }
+       div:hover p{
+        display: block;
+        font-size: xx-large;
+       }
+
+    </style>
+</head>
+<body>
+    <table border="1px">
+        <tr>
+    <th>SID</th>
+    <th>SNAME</th>
+   </tr>
+   <tr>
+    <td>101</td>
+    <td >rama</td>
+   </tr>
+   <tr>
+    <td >102</td>
+    <td >shama</td>
+   </tr>
+   <tr>
+    <td>103</td>
+    <td>sudama</td>
+   </tr>
+   <tr>
+    <td>104</td>
+    <td>harish</td>
+   </tr>
+   </table>
+   <hr>
+<p id="p">hi hello how are you
+  hi world  hi world hi world hi world hi world hi world hi world hi world 
+  <hr>
+ <h6>Hi hello how are you</h6>
+<hr>
+<h2 class="class">hi hello how are you
+  hi hello how are you
+  hi hello how are you
+</h2><hr>
+<div class="c1">hi hello how are you</div><hr>
+<h3>places</h3>
+    <ul>
+  <li>hospet</li>
+  <li>bangalore</li>
+  <li>ooty</li>
+</ul>
+<hr>
+<h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis modi placeat ad fugiat fuga neque vero hic, ipsum asperiores voluptate architecto aperiam cum incidunt dolores in sint! Temporibus, atque quam.</h5>
+<hr>
+<div>hover<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum recusandae atque tempore officiis dolore inventore consequuntur, voluptates nulla dolorum eaque? Iusto aliquid temporibus voluptates maiores? Quisquam illum nemo ullam? Animi!</p></div>
+</body>
+</html>

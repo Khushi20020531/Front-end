@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent{
+              display: grid;
+              grid-template-columns: 33.3% 33.3% 33.3%;
+            grid-template-rows: 50px  230px 400px 150px;
+            grid-template-areas: "nav nav nav"
+            "section section section"
+             "main main main"
+            "footer footer footer";
+            grid-gap: 10px;
+        }
+        nav{
+            grid-area: nav;
+            background-color: beige;
+            margin: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+        }
+        nav ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        #sec{
+            grid-area: section;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+        }
+        section ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+        }
+        main{
+            grid-area: main;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        main ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        footer{
+            list-style-type: none;
+            grid-area: footer;
+        }
+        main div button{
+            background-color: lightgray;
+            color: black;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        div section{
+            transition: background-color 2s;
+        }
+        section:hover{
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+   <div id="parent">
+     <nav>
+        <ul>
+            <li><img src="swiggylogo.png" style="width: 30px; height: 30px; border-radius: 5px;"></li>
+            <li><u>others</u>
+                <select name="" id=""></select>
+            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li>👜Corporate</li>
+            <li>🔍Search</li>
+            <li>💥Offers <sup style="color: orangered;">new</sup></li>
+            <li>🔘Help</li>
+            <li>👩‍💻Sign in</li>
+            <li>🛒Cart</li>
+        </ul>
+     </nav>
+     <section id="sec">
+        <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bolder;">
+            What's on your mind?</p>
+        <ul>
+            <li><img src="vrat.avif" alt="" width="130px" height="150px"></li>
+            <li><img src="pizza.avif" alt="" width="130px" height="150px"></li>
+            <li><img src="rolls.avif" alt="" width="130px" height="150px"></li>
+            <li><img src="ice.avif" alt="" width="130px" height="150px"></li>
+            <li><img src="shake.avif" alt="" width="130px" height="150px"></li>
+            <li><img src="biryani.avif" alt="" width="130px" height="150px"></li>
+            <li><img src="burger.avif" alt="" width="130px" height="150px"></li>
+            <li><img src="dosa.avif" alt="" width="130px" height="150px"></li>
+            <li><img src="chinese.avif" alt="" width="130px" height="150px"></li>
+            <li><img src="lassi.avif" alt="" width="130px" height="150px"></li>
+        </ul>
+     </section>
+     <main>
+        <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bolder;">
+            Top restaurant chains in Ballari</p>
+            
+            <div>
+                <button>Filter</button>
+                <button>Sort by</button>
+                <button>Fast delivery</button>
+                <button>New on Swiggy</button>
+                <button>Pure veg</button>
+                <button>Offers</button>
+            </div>
+            <ul class="img">
+                <li><img src="kfc.avif" alt="" width="250px" height="200px" style="border-radius: 20px;">
+                <figcaption style="font-weight: bold;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">KFC</figcaption>
+            <p>⭐4.3 ⏱️25-30 mins<br>
+            Burgers, Fast food, Rolls & Wraps<br>
+        Vijaynagara Colony</p></li>
+
+                <li><img src="roots.avif" alt="" width="250px" height="200px" style="border-radius: 20px;">
+                    <figcaption style="font-weight: bold;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Roots Finedine</figcaption>
+                    <p>⭐4.2 ⏱️30-35 mins<br>
+                    North Indian, Chinese, Fast Food<br>
+                Vijaynagara Colony</p></li>
+
+                <li><img src="renuka.avif" alt="" width="250px" height="200px" style="border-radius: 20px;">
+                    <figcaption style="font-weight: bold;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Renuka Kitchen</figcaption>
+                    <p>⭐4.2 ⏱️20-25 mins<br>
+                        South Indian, North Indian, Juices.....<br>
+                Cowl Bazar</p></li>
+
+                <li><img src="family.avif" alt="" width="250px" height="200px" style="border-radius: 20px;">
+                    <figcaption style="font-weight: bold;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Anushree Family Restaurant</figcaption>
+                    <p>⭐4.4 ⏱️25-30 mins<br>
+                    Biriyani,North Indian, Fast Food<br>
+                Vijaynagara Colony</p></li>
+
+            </ul>
+     </main>
+     <footer>
+        <ul>
+            <li>
+                <img src="C:\Users\HP\Pictures\Screenshots\Screenshot 2024-10-10 104217.png" alt="" width="1600px" height="400px">
+            </li>
+        </ul>
+     </footer>
+   </div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!----<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="cls20.js"></script>
+    <canvas id="c1" width="500px" height="500px"></canvas>
+</body>
+</html>--->
+
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>Gradient Text on Canvas</title>
+</head>
+<body>
+    <canvas id="canvas" width="900" height="150"></canvas>
+
+    <script>
+        function drawGradientText() {
+        const element = document.getElementById('canvas');
+        const context = canvas.getContext('2d');
+        context.font = "bold 50px Arial";
+        context.textAlign = "start";
+        const gradient = context.createLinearGradient(10, 10, element.width, 10);
+        gradient.addColorStop(.1, 'blue');
+        gradient.addColorStop(0.4, 'red');
+        gradient.addColorStop(0.2, 'yellow');
+        context.fillStyle = gradient;
+        context.fillText('Learn now, Pay later', 50, 100);
+        }
+        window.addEventListener("load", drawGradientText)
+    </script>
+</body>
+</html>-->
+
+
+<!---<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="c1" height="150px" width="150px"></canvas>
+    <script>
+        function draw(){
+            x = document.getElementById('c1')
+            c1 = x.getContext('2d')
+            var pic = new Image()
+            pic.src = "download.jpeg"
+            pic.addEventListener("load", function(){
+                c1.drawImage(pic, 0, 0, 150, 150)
+            })
+        }
+        window.addEventListener("load", draw)
+    </script>
+</body>
+</html>--->
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>click the button to get coordinates</p>
+    <button onclick="getlocation()">try it</button>
+    <p id="demo"></p>
+    <script>
+        var x = document.getElementById("demo")
+        function getlocation(){
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            else {
+                x.innerHTML = "Geolocation is not supported";
+            }
+        }
+        function showPosition(position){
+            x.innerHTML = "Latitude: " + position.coords.latitude + " " + "Longitude: " + position.coords.longitude
+        }
+        </script>
+</body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>click the button to get placeName</p>
+    <button onclick="getlocation()">try it</button>
+    <script>
+function getlocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported";
+    }
+}
+
+function showPosition(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+
+    getPlaceName(latitude, longitude);
+}
+    function getPlaceName(latitude, longitude) {
+        const geocoder = new google.maps.Geocoder();
+        const latLng = new google.maps.LatLng(latitude, longitude);
+    
+        geocoder.geocode({ location: latLng }, function (results, status) {
+            if (status === google.maps.GeocoderStatus.OK) {
+                if (results[0]) {
+                    const placeName = results[0].formatted_address;
+                    document.getElementById('placeName').textContent = placeName;
+                } else {
+                    console.error('No results found');
+                }
+            } else {
+                console.error('Geocoder failed due to: ' + status);
+            }
+        });
+    }
+    const latitude = 12.9716;
+    const longitude = 77.5946;
+    
+    getPlaceName(latitude, longitude);
+    </script>
+
+</body>
+</html>

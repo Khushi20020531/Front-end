@@ -1,0 +1,161 @@
+<!-- normal html
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: aqua;">
+    <p style="color: blue;font-size: 5em;">Hello, how are you!!!</p>
+</body>
+</html> -->
+
+<!---using DOM-->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="s1">Hello, how are you!!</p>
+    <script>
+        a=document.getElementById('s1').innerHTML
+         console.log(a);
+        document.getElementById('s1').style.color = "blue";
+        document.getElementById('s1').style.fontSize = "5em";
+        document.body.style.backgroundColor = "aqua";
+    </script>
+</body>
+</html> -->
+
+<!--DOM elements-->
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">first paragraph</p>
+    <p class="p">second paragraph</p>
+    <p class="p2">third paragraph</p>
+    <script>
+        //p1
+        document.getElementById('p1').style.color = "blue";
+        document.getElementById('p1').style.fontSize = "3em";
+        //p
+        const paragraphByClass = document.getElementsByClassName('p');
+        paragraphByClass[p].style.color= "green";
+        //p2
+        
+    </script>
+</body>
+</html> -->
+
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="t1">
+    <input type="submit" onclick="submit()">
+    <script>
+        function submit() {
+            a =  document.getElementById('t1').value;
+            document.body.textContent = a
+        }
+    </script>
+</body>
+</html> -->
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>enter the color</p>
+    <input type="text" id="myinput">
+    <input type="submit" onclick="abc()">
+    <script>
+        function abc(){
+            let a=document.getElementById("myinput").value
+            if(a.length==0){
+                document.body.style.backgroundColor="green"
+            }
+            else{
+                document.body.style.backgroundColor=a
+            }
+        }
+    </script>
+</body>
+</html> -->
+
+<!----wap to check email using DOM in js-->
+<!-- <html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="emailForm">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <button type="button" onclick="checkEmail()">Check Email</button>
+  </form>
+  <p id="res"></p>
+  <script>
+    function checkEmail() {
+  const emailInput= document.getElementById("email");
+  const email= emailInput.value;
+  const emailRegex= /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (emailRegex.test(email)) {
+    document.getElementById("res").textContent= "Valid email address.";
+  } else {
+    document.getElementById("res").textContent= "Invalid email address.";
+  }
+}
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <form id="usernameForm">
+    <p style="font-size: 3em;">To check whether the username contains number or not</p>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username"><br><br>
+    <button type="button" onclick="checkusername()">Check Username</button>
+  </form>
+  <p id="result"></p>
+  <script>
+    function checkusername() {
+  const usernameInput = document.getElementById("username");
+  const username = usernameInput.value;
+  let hasNumber = false;
+  for (let i = 0; i < username.length; i++) {
+    if (!isNaN(parseInt(username[i]))) {
+      hasNumber = true;
+      break;
+    }
+  }
+  if (hasNumber) {
+    document.getElementById("result").textContent = "Username should not contain numbers.";
+  } else {
+    document.getElementById("result").textContent = "Valid username.";
+  }
+}
+  </script>
+</body>
+</html>

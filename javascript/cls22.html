@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="450" style="color: blueviolet;"></canvas>
+    <script>
+        const canvas=document.getElementById("myCanvas")
+        const ctx=canvas.getContext("2d")
+        const centerX=canvas.width/2;
+        const centerY=canvas.height/2;
+        const radius=100
+        let startAngle=0
+        let endAngle=0
+        function animateArc(){
+            ctx.arc(centerX,centerY,radius,startAngle,endAngle,false)
+            ctx.strokeStyle='red'
+            ctx.lineWidth=3
+            ctx.stroke()
+            endAngle=endAngle+0.02
+            if(endAngle<=2*Math.PI){
+                requestAnimationFrame(animateArc)
+            }
+            else{
+                console.log("animation completed")
+            }
+        }
+        animateArc()
+    </script>
+</body>
+</html>

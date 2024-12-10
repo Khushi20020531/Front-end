@@ -1,0 +1,11 @@
+write the steps to 
+---initialize a new Git repository
+1. Open a terminal or command prompt in the desired directory.
+2. Type git init and press Enter.
+
+---stage all files
+1. Type git add . and press Enter.
+
+---commit the changes with a message
+1. Type git commit -m "write message here" and press Enter.
+   Replace "message here" with a descriptive message about the changes.

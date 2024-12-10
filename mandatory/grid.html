@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="mediaqueries.css">
+
+    <style>
+        *{
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    grid-template-areas: "header header" "sidebar main-content" "footer footer";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    height: 80vh;
+}
+.header{
+    grid-area: header;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    font-size: 3rem;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: rgb(174, 171, 171);
+    border-right: 1px solid rgb(174, 171, 171);
+}
+.main-content{
+    grid-area: main-content;
+    padding: 1px;
+}
+.footer{
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+    </style>
+</head>
+    <body>
+        <div class="container">
+            <header class="header">Header</header>
+            <aside class="sidebar"><h2>Sidebar</h2> <br> The menu or quick access content</aside>
+            <main class="main-content"><h2>Main content</h2> <br> The core content should be displayed.</main>
+            <footer class="footer"><h1>Footer</h1></footer>
+        </div>
+    </body>
+    </html>

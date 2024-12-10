@@ -1,0 +1,99 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="myInput">
+    <script>
+        document.getElementById("myInput")
+        .addEventListener("keyup",function(event)
+        {
+        alert("key pressed:"+event.key);
+        });
+    </script>
+</body>
+</html> -->
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <div id="output"></div>
+    <script>
+        document.getElementById("input1")
+        .addEventListener("keydown", function()
+    {
+        displayMessage();
+    });
+     document.getElementById("input2")
+     .addEventListener("keydown", function()
+     {
+         displayMessage();
+     });
+    function displayMessage(){
+        document.getElementById("output")
+        .innerHTML = "Key pressed:" + event.key;
+    }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>changing bg color</h2>
+    <div id="myDiv" style="width: 100px; height: 100px; 
+    color: black; background-color: chartreuse;"></div>
+    <script>
+        document.getElementById("myDiv")
+        .addEventListener("click", function()
+        {
+            document.getElementById("myDiv")
+            .style.backgroundColor="aqua";
+        });
+    </script>
+</body>
+</html>--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="mybtn">click me!</button>
+    <p id="para" style="display: none;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Voluptatibus non iusto nesciunt, voluptatum nostrum tenetur 
+        repudiandae nulla sint alias autem blanditiis ratione,
+         iure saepe magnam qui, cupiditate numquam accusamus ducimus.</p>
+    <script>
+        document.getElementById("mybtn").
+        addEventListener("dblclick", function()
+        {
+           var paragraph=document.getElementById("para")
+           if(paragraph.style.display=="none"){
+            paragraph.style.display="block";
+           }
+           else{
+            paragraph.style.display="none";
+           }
+        });
+    </script>
+</body>
+</html>

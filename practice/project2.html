@@ -1,0 +1,276 @@
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>TPIPon21nov</title>
+        <style>
+            body {
+                margin: 40px;
+                background-color: #004961;
+                color: white;
+            }
+            * {
+                font-family: sans-serif;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 8px;
+                text-align: left;
+                font-size: 18px;
+                border: 1px solid white;
+            }
+            input[type=text] {
+                padding: 4px 8px;
+                font-size: 18px;
+                width: 175px;
+            }
+            tr:first-child th {
+                border-top: 0;
+                padding-left: 18px;
+            }
+            tr:last-child td {
+                border-bottom: 0;
+            }
+            tr td:first-child, tr th:first-child {
+                border-left: 0;
+            }
+            tr td:last-child, tr th:last-child {
+                border-right: 0;
+            }
+            button {
+                font-size: 22px;
+                padding: 2px 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 style="text-decoration: underline;">localStorage and sessionStorage</h2>
+        <table>
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th colspan="2">Value</th>
+              </tr>
+              <tr>
+                <td><input id="key-txt" type="text" placeholder="Enter key"></td>
+                <td><input id="val-txt" type="text" placeholder="Enter value"></td>
+                <td><button id="add-btn">+</button></td>
+              </tr>
+            </thead>
+            <tbody id="item-list"></tbody>
+          </table>
+          <p id="output"></p>
+          <script>
+const addBtn = document.getElementById("add-btn");
+var keyTxt = document.getElementById("key-txt");
+var valTxt = document.getElementById("val-txt");
+const itemList = document.getElementById("item-list");
+
+function addItem(key, value) {
+  itemList.innerHTML += `
+    <tr>
+      <td><input type="text" value="${key}"></td>
+      <td><input type="text" value="${value}" onchange="updateItem(this, '${key}');"></td>
+      <td><button onclick="deleteItem(this, '${key}');">&times;</button></td>
+    </tr>
+  `;
+}
+
+function updateItem(el, key) {
+  localStorage.setItem(key, el.value);
+  sessionStorage.setItem(key, el.value);
+  console.log(`Updated '${key}'`);
+}
+
+function deleteItem(el, key) {
+  localStorage.removeItem(key);
+  sessionStorage.removeItem(key);
+  let tr = el.parentNode.parentNode;
+  tr.parentNode.removeChild(tr);
+}
+
+document.addEventListener("DOMContentLoaded",()=> {
+  // Prioritize localStorage if both exist
+  var key;
+  const storage = localStorage.getItem(key) ? localStorage : sessionStorage;
+  for (const i of Object.entries(storage)) {
+    addItem(i[0], i[1]);
+  }
+});
+
+addBtn.addEventListener("click",()=> {
+  if (keyTxt.value == "" || valTxt.value == "") {
+    alert("Please enter a key and value.");
+  } else if (localStorage.getItem(keyTxt.value) != null || sessionStorage.getItem(keyTxt.value) != null) {
+    alert("This key already exists.");
+  } else {
+    localStorage.setItem(keyTxt.value, valTxt.value);
+    sessionStorage.setItem(keyTxt.value, valTxt.value);
+    addItem(keyTxt.value, valTxt.value);
+
+    keyTxt.value = "";
+    valTxt.value = "";
+  }
+});
+          </script>
+    </body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TPIPon21nov</title>
+        <style>
+            body {
+                margin: 40px;
+                background-color: #004961;
+                color: white;
+            }
+            * {
+                font-family: sans-serif;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 8px;
+                text-align: left;
+                font-size: 18px;
+                border: 1px solid white;
+            }
+            input[type=text] {
+                padding: 4px 8px;
+                font-size: 18px;
+                width: 175px;
+            }
+            tr:first-child th {
+                border-top: 0;
+                padding-left: 18px;
+            }
+            tr:last-child td {
+                border-bottom: 0;
+            }
+            tr td:first-child, tr th:first-child {
+                border-left: 0;
+            }
+            tr td:last-child, tr th:last-child {
+                border-right: 0;
+            }
+            button {
+                font-size: 22px;
+                padding: 2px 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 style="text-decoration: underline;">localStorage and sessionStorage</h2>
+        <table>
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th colspan="2">Value</th>
+              </tr>
+              <tr>
+                <td><input id="key-txt" type="text" placeholder="Enter key"></td>
+                <td><input id="val-txt" type="text" placeholder="Enter value"></td>
+                <td><button id="add-btn">+</button></td>
+              </tr>
+            </thead>
+            <tbody id="item-list"></tbody>
+          </table>
+          <p id="output"></p>
+          <script>
+            
+const addBtn = document.getElementById("add-btn");
+const keyTxt = document.getElementById("key-txt");
+const valTxt = document.getElementById("val-txt");
+const itemList = document.getElementById("item-list");
+
+function addItem(key, value) {
+  itemList.innerHTML += `
+    <tr>
+      <td><input type="text" value="${key}"></td>
+      <td><input type="text" value="${value}" onchange="updateItem(this, '${key}');"></td>
+      <td><button onclick="deleteItem(this, '${key}');">&times;</button></td>
+    </tr>
+  `;
+}
+
+function updateItem(el, key) {
+  localStorage.setItem(key, el.value);
+  sessionStorage.setItem(key, el.value);
+  console.log(`Updated '${key}'`);
+  console.log("Local Storage:");
+  console.log(localStorage);
+  console.log("Session Storage:");
+  console.log(sessionStorage);
+}
+
+function deleteItem(el, key) {
+  localStorage.removeItem(key);
+  sessionStorage.removeItem(key);
+  let tr = el.parentNode.parentNode;
+  tr.parentNode.removeChild(tr);
+  console.log("Item deleted:", key);
+  console.log("Local Storage:");
+  console.log(localStorage);
+  console.log("Session Storage:");
+  console.log(sessionStorage);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Prioritize localStorage if both exist
+  var key;
+  const storage = localStorage.getItem(key) ? localStorage : sessionStorage;
+  for (const i of Object.entries(storage)) {
+    addItem(i[0], i[1]);
+  }
+  console.log("Initial Storage:");
+  console.log("Local Storage:");
+  console.log(localStorage);
+  console.log("Session Storage:");
+  console.log(sessionStorage);
+});
+
+addBtn.addEventListener("click", () => {
+  if (keyTxt.value == "" || valTxt.value == "") {
+    alert("Please enter a key and value.");
+  } else if (localStorage.getItem(keyTxt.value) != null || sessionStorage.getItem(keyTxt.value) != null) {
+    alert("This key already exists.");
+  } else {
+    localStorage.setItem(keyTxt.value, valTxt.value);
+    sessionStorage.setItem(keyTxt.value, valTxt.value);
+    addItem(keyTxt.value, valTxt.value);
+    console.log("Item added:");
+    console.log("Local Storage:");
+    console.log(localStorage);
+    console.log("Session Storage:");
+    console.log(sessionStorage);
+
+    keyTxt.value = "";
+    valTxt.value = "";
+  }
+});
+</script>
+    </body>
+</html>

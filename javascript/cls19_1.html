@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banking Form</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    margin: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 5px;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <h1>Banking Form</h1>
+    <form id="bankForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="accountNumber">Account Number:</label>
+        <input type="text" id="accountNumber" name="accountNumber" required>
+
+        <label for="balance">Initial Balance:</label>
+        <input type="number" id="balance" name="balance" required>
+        
+        <label for="pin">PIN:</label>
+        <input type="password" id="pin" name="pin" required>
+<br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+    class Account {
+    constructor(name, accountNumber, balance, pin) {
+        this.name = name;
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.pin = pin;
+        this.transactionHistory = [];
+    }
+    deposit(amount, enteredPin) {
+        if (this.verifyPin(enteredPin)) {
+            this.balance += amount;
+            this.transactionHistory.push({
+                type: 'Deposit',
+                amount: amount,
+                date: new Date()
+            });
+            console.log(`Deposited ${amount}. New balance: ${this.balance}`);
+        } else {
+            console.log("Incorrect PIN.");
+        }
+    }
+    withdraw(amount, enteredPin) {
+        if (this.verifyPin(enteredPin)) {
+            if (amount <= this.balance) {
+                this.balance -= amount;
+                this.transactionHistory.push({
+                    type: 'Withdrawal',
+                    amount: amount,
+                    date: new Date()
+                });
+                console.log(`Withdrew ${amount}. New balance: ${this.balance}`);
+            } else {
+                console.log("Insufficient balance.");
+            }
+        } else {
+            console.log("Incorrect PIN.");
+        }
+    }
+    checkBalance(enteredPin) {
+        if (this.verifyPin(enteredPin)) {
+            console.log(`Current balance: ${this.balance}`);
+        } else {
+            console.log("Incorrect PIN.");
+        }
+    }
+    verifyPin(enteredPin) {
+        return enteredPin === this.pin;
+    }
+    getTransactionHistory(enteredPin) {
+        if (this.verifyPin(enteredPin)) {
+            console.log("Transaction History:");
+            this.transactionHistory.forEach(transaction => {
+                console.log(`${transaction.date}: ${transaction.type} - ${transaction.amount}`);
+            });
+        } else {
+            console.log("Incorrect PIN.");
+        }
+    }
+}
+    </script>
+</body>
+</html>

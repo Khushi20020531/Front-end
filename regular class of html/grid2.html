@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media screen and (max-width: 480px) {
+            #container{
+            display: grid;
+            grid-template-columns:16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+            grid-template-rows: 70px  70px 70px 70px 70px 70px;
+            text-align: center;
+            grid-template-areas: "nav nav nav nav nav nav"
+            "header header header header header header"
+            "main main main main main main"
+            "section section section aside aside aside"
+            "footer footer footer footer footer footer";
+            grid-gap: 10px;
+        }   
+        }
+        nav{
+            grid-area: nav;
+            background-color: blue;
+            border: 2px solid  black;
+            color: white;
+
+        }
+        header{
+            grid-area: header;
+            background-color: blue;
+            border: 2px solid  black;
+            color: white;
+        }
+        main{
+            grid-area: main;
+            background-color: blue;
+            border: 2px solid  black;
+            color: white;
+        }
+        section{
+            grid-area: section;
+            background-color: blue;
+            border: 2px solid  black;
+            color: white;
+        }
+        aside{
+            grid-area: aside;
+            background-color: blue;
+            border: 2px solid  black;
+            color: white;
+        }
+        footer{
+            grid-area: footer;
+            background-color: blue;
+            border: 2px solid  black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <nav>Nav</nav>
+        <header>Header</header>
+        <main>Main</main>
+        <section>Section</section>
+        <aside>Aside</aside>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>

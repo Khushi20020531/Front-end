@@ -1,0 +1,112 @@
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="changeBackgroundColor()">click me</button>
+    <p id="paragraph" onclick="changeColor()">click me</p>
+    <script>      
+//headings
+const heading1=document.createElement('h1');
+heading1.textContent="Heading 1";
+document.body.appendChild(heading1);
+
+const heading2=document.createElement('h2');
+heading2.textContent="Heading 2";
+document.body.appendChild(heading2);
+//5 para
+for(let i=1;i<=5;i++){
+    const paragraph=document.createElement('p');
+    paragraph.textContent=`paragraph ${i}`;
+    document.body.appendChild(paragraph);
+
+    //to add dynamic behaviour
+    function changeColor() {
+  const paragraph = document.getElementById("paragraph");
+  paragraph.style.backgroundColor = "lightgreen";
+}
+}
+//button
+const button=document.createElement('button');
+button.textContent='click me';
+document.body.appendChild(button);
+//change bg color onclick
+
+function changeBackgroundColor() {
+  document.body.style.backgroundColor = 'lightblue'
+};
+
+//to retrieve
+const firstparagraph=document.querySelector('p');
+console.log(firstparagraph.textContent);
+
+const allParagraphs=document.querySelectorAll('p');
+allParagraphs.forEach(paragraph=>{
+    console.log(paragraph.textContent);
+});
+    </script>
+</body>
+</html>-->
+
+
+
+<!---program 2-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+    <h1>Paragraph Interaction Example</h1>
+    
+    <div>
+        <p id="para1" class="dynamic">This is the first paragraph. Click to change text!</p>
+        <p id="para2" class="dynamic">This is the second paragraph. Click to change text!</p>
+        <p id="para3" class="dynamic">This is the third paragraph. Click to change text!</p>
+        <p id="para4" class="dynamic">This is the fourth paragraph. Click to change text!</p>
+        <p id="para5" class="dynamic">This is the fifth paragraph. Click to change text!</p>
+    </div>
+
+    <script>
+        // Accessing the first paragraph using getElementById
+var para1 = document.getElementById("para1");
+para1.onclick = function() {
+    para1.innerHTML = "You clicked the first paragraph!";
+};
+
+// Accessing all paragraphs using getElementsByClassName
+var paragraphs = document.getElementsByClassName("dynamic");
+for (var i = 0; i < paragraphs.length; i++) {
+    paragraphs[i].onclick = function() {
+        this.innerHTML = "You clicked a dynamic paragraph!";
+    };
+}
+
+// Using querySelector to select the first paragraph
+var firstPara = document.querySelector("p");
+firstPara.onclick = function() {
+    firstPara.innerHTML = "You clicked the first paragraph using querySelector!";
+};
+
+// Using querySelectorAll to select all paragraphs with class "dynamic"
+var allParas = document.querySelectorAll("p.dynamic");
+for (let para of allParas) {
+    para.onclick = function() {
+        para.innerHTML = "You clicked a paragraph using querySelectorAll!";
+    };
+}
+
+// Dynamically change the text of the last paragraph when the page loads
+window.onload = function() {
+    var lastPara = document.querySelectorAll("p")[4]; // 0-indexed, 5th paragraph
+    lastPara.innerHTML = "This is the last paragraph, and it has been updated on page load!";
+};
+
+    </script>
+</body>
+</html>

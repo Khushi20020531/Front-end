@@ -1,0 +1,133 @@
+if
+-------------------------
+if {
+    //body of if statement
+}
+
+
+if-else
+-------------------------
+if {
+    //code to be executed if condition is true
+}
+else {
+    //code to be executed if condition is false
+}
+
+
+nested / else-if
+------------------------
+if {
+    //body of if statement
+}
+else if {
+    //body of else-if statement
+}
+else if {
+    //body of else-if statement
+}
+else {
+    //body of else statement
+}
+
+30oct24
+-----------------------
+for (initialization; condition; increment/decrement)
+{
+    //code to be execute repeatedly
+}
+
+while (condition)
+{
+    //code to be execute repeatedly
+}
+
+do{
+    //code to be execute repeatedly
+}
+while(condition);
+
+//4 nov
+-------------------------
+switch(expression)
+{
+    case value1:
+    //code to be executed if expression equals value1
+    break;
+    case value2:
+    //code to be executed if expression equals value2
+    break;
+    default:
+    //code to execute if no case matches
+}
+
+let day=new Date().getDay();
+switch(day){
+    case 1:
+    console.log("sunday);
+    break;
+    case 2:
+    console.log("monday);
+    break;
+    //other cases
+
+    default:
+    console.log("invalid day");
+}
+
+function add(a, b){
+    return a + b;
+}
+
+const subtract = function(a, b){
+    return a - b;
+
+}
+
+function multipleBy(factor){
+    return function(number){
+        return number * factor;
+    };
+}
+const double = multipleBy(2);
+const double = multipleBy(3);
+
+console.log(double(5));
+console.log(triple(4));
+
+//nov 5
+function factorial(n){
+    if (n == 0){
+        return 1;
+    }
+    else{
+        return n * factorial(n-1);
+    }
+}
+
+
+
+
+
+//2 dec 2024
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  speak() {
+    console.log('Generic animal sound');
+  }
+}
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name); // Call the parent constructor
+    this.breed = breed;
+  }
+  speak() {
+    console.log('Woof!');
+  }
+}
+const dog = new Dog('Buddy', 'Golden Retriever');
+dog.speak(); // Output: Woof!
+console.log(dog.name); // Output: Buddy
+console.log(dog.breed); // Output: Golden Retriever

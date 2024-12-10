@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightgray;
+        }
+        #parent{
+            display: grid;
+              grid-template-columns: 33.3% 33.3% 33.3%;
+            grid-template-rows: 50px  230px 400px 150px;
+            grid-template-areas: "nav nav nav"
+            "section section section"
+            "section section section"
+             "main main main"
+            "footer footer footer";
+            grid-gap: 10px;
+        }
+        nav{
+            grid-area: nav;
+            background-color: beige;
+            margin: 0;
+            font-weight: bold;
+            height: 40px;
+            justify-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2px;
+            margin: 0;
+        }
+        nav ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        .nav{
+            grid-area: nav;
+            background-color: white;
+            margin: 0;
+            font-weight: bold;
+            height: 40px;
+        }
+        .sec1{
+            grid-area: sec1;
+            background-color: lightgray;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <nav>
+            <ul>
+                <li><img src="fplogo.svg" alt="" width="100px" ></li>
+                <li><input type="text" placeholder="Search for products, brands and more            🔍" style="width: 300px;"></li>
+                <li><button style="background-color: white;color: rgb(0, 64, 255);width: 90px;">Login</button></li>
+                <li>Become a seller</li>
+                <li>More
+                    <select name="" id=""></select>
+                </li>
+                <li>🛒Cart</li>
+            </ul>
+        </nav>
+        <nav class="nav">
+              <ul>
+                <li>Electronics<select name="" id=""></select></li>
+                <li>TV & Applications<select name="" id=""></select></li>
+                <li>More<select name="" id=""></select></li>
+                <li>Women<select name="" id=""></select></li>
+                <li>Men<select name="" id=""></select></li>
+                <li>Baby & Kids<select name="" id=""></select></li>
+                <li>Home & Furniture<select name="" id=""></select></li>
+                <li>Sports, Books,etc<select name="" id=""></select></li>
+                <li>Flights<select name="" id=""></select></li>
+                <li>Other zone<select name="" id=""></select></li>
+              </ul>
+        </nav>
+        <div>
+            <p style="font-weight: bold;font-size: 20px;">Big Shopping Utsav!</p>
+        </div>
+        <div class="sec1">
+            <p style="font-weight: bold;font-size: 30px;">HERO DEALS</p>
+            <ul>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

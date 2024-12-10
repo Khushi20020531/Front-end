@@ -1,0 +1,177 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="mycanvas" width="100" height="100"></canvas>
+    <script>
+        const canvas=document.getElementById('mycanvas')
+        const ctx=canvas.getContext('2d')
+        ctx.fillStyle="blue"
+        ctx.fillRect(20,20,100,50)
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="mycanvas" width="100" height="100"></canvas>
+    <script>
+        const canvas=document.getElementById('mycanvas')
+        const ctx=canvas.getContext('2d')
+        ctx.beginPath()
+        ctx.arc(50,50,40,0,2*Math.PI)
+        ctx.fillStyle="magenta"
+        ctx.fill()
+    </script>
+</body>
+</html>- -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        ctx.beginPath();
+        ctx.moveTo(100, 20);
+        ctx.lineTo(160, 100);
+        ctx.lineTo(50, 100);
+        ctx.closePath();
+        ctx.fillStyle = 'green';
+        ctx.fill();
+    </script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+    <button onclick="drawShapes()">Draw Shapes</button>
+    <button onclick="clearCanvas()">Clear Canvas</button>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function drawShapes() {
+            // Rectangle
+            ctx.fillStyle = 'blue';
+            ctx.fillRect(20, 20, 100, 50);
+
+            // Circle
+            ctx.beginPath();
+            ctx.arc(150, 75, 20, 0, 2 * Math.PI);
+            ctx.fillStyle = 'red';
+            ctx.fill();
+
+            // Triangle
+            ctx.beginPath();
+            ctx.moveTo(250, 20);
+            ctx.lineTo(300, 100);
+            ctx.lineTo(200, 100);
+            ctx.closePath();
+            ctx.fillStyle = 'green';
+            ctx.fill();
+        }
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+
+<!---pentagon-->
+<!-- <html>
+<head>
+    <title>Pentagon</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        const radius = 50; 
+        const centerX = 150; 
+        const centerY = 100;
+        const angle = Math.PI * 2 / 5; 
+        ctx.beginPath();
+        for (let i = 0; i < 5; i++) {
+            const x = centerX + radius * Math.cos(i * angle); 
+            const y = centerY + radius * Math.sin(i * angle); 
+            if (i === 0) {
+                ctx.moveTo(x, y); 
+            } else {
+                ctx.lineTo(x, y);
+            }
+        }
+        ctx.closePath(); 
+        ctx.fillStyle = 'purple'; 
+        ctx.fill();
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- <html>
+<head>
+    <title>Bouncing Ball</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        let x = 150, y = 75, dx = 2, dy = 2, radius = 10;
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, 2 * Math.PI);
+            ctx.fillStyle = 'blue';
+            ctx.fill();
+            x += dx;
+            y += dy;
+
+            if (x + radius > canvas.width || x - radius < 0) {
+                dx = -dx;
+            }
+            if (y + radius > canvas.height || y - radius < 0) {
+                dy = -dy;
+            }
+            requestAnimationFrame(draw);
+        }
+        draw();
+    </script>
+</body>
+</html> -->

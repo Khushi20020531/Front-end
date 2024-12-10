@@ -1,0 +1,107 @@
+<!-- -to validate a phone number
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num1" >
+    <button type="submit" onclick="abc()">submit</button>
+    <p id="result"></p>
+<script>
+    function abc(){
+        var num1=document.getElementById('num1').value;
+        isValid=true;
+        if(num1==10){
+        for(var i=0;i<num1.length;i++){
+            if(!isNaN(num1.charAt(i))){
+               continue;
+            }
+            else{
+                isValid=false;
+                break;
+            }
+        }
+        if(isValid){
+            document.getElementById("result").innerHTML="valid number";
+        }
+        else{
+            document.getElementById("result").innerHTML="invalid number";
+        }
+    }
+}
+</script>
+</body>
+</html> -->
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM manipulation</h1>
+    <p id="p1">Hello world</p>
+    <p id="p2">Hello, how are you?</p>
+    <p id="p3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A voluptatum voluptatibus alias,
+        veritatis fuga cum nesciunt optio minima neque quasi perferendis praesentium.
+         Earum est voluptate hic numquam dignissimos asperiores nemo.
+    </p>
+    <script>
+        //getelementbyid
+        var p1=document.getElementById('p1');
+        p1.style.fontSize="3em";
+        var p2=document.getElementById('p2');
+        p[0].style.color="red";
+        var p3=document.getElementById('p3');
+        
+    </script>
+</body>
+</html> -->
+
+
+<!----pgm1-->
+<script>
+function printPattern(rows) {
+    for (let i = 1; i <= rows; i++) {
+      let row = "";
+      for (let j = 1; j <= i; j++) {
+        row += "* ";
+      }
+      console.log(row);
+    }
+  }
+printPattern(4);
+</script>
+
+<!--pgm2 to print prime numbers from 50 tp 100 using all loops-->
+<!-- <script>
+    //using for
+    function ForLoop(start,end) {
+  for (let num = start; num <= end; num++) {
+    let isPrime = true;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime && num > 1) {
+      console.log(num);
+    }
+  }
+}
+ForLoop(50,100);
+</script>  -->
+
+<!------to print all even nums from 1 - 20-->
+<script>
+    let sum=0;
+for (let i=2; i<=20; i+=2) {
+  sum+=i;
+}
+console.log("the sum of all even numbers from 1 to 20 is:", sum);
+</script>
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API GET & POST Example</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  width: 200px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Items List</h1>
+    <ul id="items-list">
+    </ul>
+
+    <h2>Add a New Item</h2>
+    <form id="add-item-form">
+      <input type="text" id="item-name" placeholder="Enter item name" required>
+      <button type="submit">Add Item</button>
+    </form>
+  </div>
+
+  <script>
+    // URL for the mock API (using JSONPlaceholder for example API)
+const apiUrl = 'https://jsonplaceholder.typicode.com/posts'; // Replace with your own mock API or server endpoint
+
+// Fetch items and display them
+async function fetchItems() {
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    const itemsList = document.getElementById('items-list');
+    itemsList.innerHTML = ''; // Clear the list before adding new items
+    data.slice(0, 5).forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = item.title; // Display title of the item
+      itemsList.appendChild(li);
+    });
+  } catch (error) {
+    console.error('Error fetching items:', error);
+  }
+}
+
+// Handle form submission to add a new item
+document.getElementById('add-item-form').addEventListener('submit', async (event) => {
+  event.preventDefault(); // Prevent page reload on form submission
+
+  const itemName = document.getElementById('item-name').value;
+
+  if (itemName) {
+    const newItem = {
+      title: itemName,
+      body: 'New item body text',
+      userId: 1
+    };
+
+    try {
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newItem)
+      });
+
+      if (response.ok) {
+        alert('Item added successfully!');
+        fetchItems(); // Refresh the list after adding
+      } else {
+        alert('Failed to add item');
+      }
+    } catch (error) {
+      console.error('Error adding item:', error);
+    }
+  }
+});
+
+// Initialize the app
+fetchItems();
+  </script>
+</body>
+</html>

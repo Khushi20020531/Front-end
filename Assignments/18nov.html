@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="description">Original Text</p>
+    <script>
+        const description = document.querySelector('#description');
+        description.textContent = 'New Text';
+        document.getElementById('description').style.color="red";
+        document.getElementById('description').style.fontSize="3em";
+    </script>
+</body>
+</html> 
+
+
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="highlight">Element 1</div>
+    <p class="highlight">Element 2</p>
+    <script>
+        const highlightElements = document.querySelectorAll('.highlight');
+        highlightElements.forEach(element => {
+        element.style.backgroundColor = 'yellow';
+        element.style.fontSize="3em";
+});
+    </script>
+</body>
+</html> 
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="userInput">
+    <script>
+        const userInput = document.querySelector('#userInput');
+        userInput.value = 'John Doe';
+        document.getElementById('userInput').style.fontSize="4em"
+    </script>
+</body>
+</html> 
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="items">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <script>
+        const items = document.querySelectorAll('.items li');
+        items.forEach(item => {
+        console.log(item.textContent);
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>submit and blur</h1>
+    enter the name: <input type="text" id="letterInput" onblur="myFunction()"><br><br>
+    <button id="submitBtn" onclick="myFun()">submit</button><br><br>
+    enter color:<input type="text" id="colorInput"><br><br>
+    <p id="output"></p>
+    <script>
+        const letterInput = document.getElementById('letterInput');
+        const colorInput = document.getElementById('colorInput');
+        const submitBtn = document.getElementById('submitBtn');
+        const output = document.getElementById('output');
+
+        submitBtn.addEventListener('click',()=>
+    {
+        const letter=letterInput.value;
+        output.textContent=letter;
+        output.style.display="block";
+    });
+
+    colorInput.addEventListener('blur',()=>
+{
+    const color=colorInput.value;
+    output.style.color=color;
+});
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    enter something: <input type="text" id="letterInput"><br><br>
+    <button id="resetBtn">reset</button><br><br>
+    enter color:<input type="text" id="colorInput">
+    <script>
+        const letterInput = document.getElementById('letterInput');
+        const colorInput = document.getElementById('colorInput');
+        const resetBtn = document.getElementById('resetBtn');
+
+        resetBtn.addEventListener('click',()=>
+    {
+        letterInput.value='';
+        colorInput.value='';
+        output.textContent="";
+    })
+
+    letterInput.addEventListener('focus',()=>
+{
+    letterInput.style.backgroundColor="aqua";
+})
+    </script>
+</body>
+</html> -->
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="sel">
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="aqua">aqua</option>
+        <option value="yellow">yellow</option>
+    </select>
+    <script>
+        const sel = document.getElementById('sel');
+        sel.addEventListener('change',()=>
+    {
+        const selectedColor = sel.value;
+        document.body.style.backgroundColor = selectedColor;
+        })
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        .line-number {
+            display: inline-block;
+            width: 20px;
+            text-align: right;
+            margin-right: 5px;
+            color: gray;
+        }
+        div{
+            border: 1px solid black;
+            width: 200px;
+            height: 100px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <div onscroll="myFunction()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus non repellendus numquam temporibus expedita doloremque, repudiandae corporis, dolore veniam, iste accusamus nobis! Obcaecati suscipit, perferendis odio perspiciatis enim laudantium odit.</div>
+    <p>scrolled <span id="demo">0</span> times</p>
+    <script>
+        const form = document.getElementById('myForm');
+        const displayDiv = document.getElementById('display');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            const entries = formData.entries();
+
+            let output = '';
+            let lineNumber = 1;
+            for (const [key, value] of entries) {
+                output += `<p class="line-number">${lineNumber++}.</p> ${key}: ${value}<br>`;
+            }
+            displayDiv.innerHTML = output;
+        });
+        let x=0;
+        function myFunction(){
+            document.getElementById("demo").innerText=x+=1;
+        }
+    </script>
+</body> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="myForm">
+        <input type="text" id="name" placeholder="name"><br><br>    
+        <input type="email" id="email" placeholder="email"><br><br>
+        <input type="number" id="age" placeholder="age"><br><br>
+        <input type="text" id="place" placeholder="place"><br><br>
+
+        <input type="submit" value="Submit">
+        <p id="display"></p>
+    </form>
+    <script>
+       let name=document.getElementById("name",).value;
+       let email=document.getElementById("email").value;
+       let age=document.getElementById("age").value;
+       let place=document.getElementById("place").value;
+
+       sessionStorage.setItem("name",'khushi');
+       sessionStorage.setItem("email",'khushi@gmail.com');
+       sessionStorage.setItem("age",'20');
+       sessionStorage.setItem("palce",'hospet');
+       
+       name=sessionStorage.getItem("name");
+       email=sessionStorage.getItem("email");
+       age=sessionStorage.getItem("age");
+       place=sessionStorage.getItem("palce");
+
+       sessionStorage.removeItem("age");
+
+       document.getElementById("display").innerHTML=
+       "name: "+name+"<br>"+"email: "+email+"<br>"+"age: "+age+"<br>"+"place: "+place;
+    </script>
+</body>
+</html>
